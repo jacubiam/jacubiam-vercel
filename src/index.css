@@ -32,6 +32,14 @@
         text-shadow: 2px 2px 5px red;
     }
 
+    .shadow-name {
+        text-shadow: 2px 2px 5px darkgreen;
+    }
+
+    .shadow-role {
+        text-shadow: 2px 2px 5px gold;
+    }
+
     .shadow-hamburger {
         text-shadow: 2px -2px 4px red;
     }

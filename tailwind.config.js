@@ -25,6 +25,9 @@ export default {
       backgroundImage:{
         'radial': 'radial-gradient(rgb(68, 79, 111) 30%, #384261)'
       },
+      fontSize: {
+        '4.5xl':'40px',
+      },
       keyframes:{
         'hamburger': {
           '0%': { transform: 'translateX(0)'},
