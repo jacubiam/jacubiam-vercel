@@ -7,8 +7,11 @@ function App() {
     <>
       <Header />
       {/* Temporary pb-8*/}
-      <main className="bg-radial border border-smoky rounded-[40px] mx-3 my-4 pb-8 lg:max-w-screen-lg lg:mx-auto">
-        <Hero/>
+      <main id="home" className="pt-16 lg:pt-20">
+        <div className="bg-radial border border-smoky rounded-[40px] mx-3 pb-8 lg:max-w-screen-lg lg:mx-auto">
+          <Hero />
+
+        </div>
       </main>
     </>
   );

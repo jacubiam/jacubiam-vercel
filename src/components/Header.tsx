@@ -17,6 +17,9 @@ const Header = () => {
     if (isOpen) {
       header?.classList.remove('rounded-br-none');
       nav?.classList.replace('animate-hamburger', 'animate-hamburger-close');
+      setTimeout(() => {
+        nav?.parentElement?.classList.replace('block', 'hidden');
+      }, 300);
       setIsOpen(false);
     } else {
       header?.classList.add('rounded-br-none');
@@ -39,7 +42,7 @@ const Header = () => {
   });
 
   return (
-    <header className="sticky top-0 overflow-hidden max-w-screen-xl mx-1 xl:mx-auto">
+    <header className="fixed top-0 left-1/2 -translate-x-1/2 w-full z-10 overflow-hidden max-w-screen-xl px-1">
       <div ref={headerRef} className="bg-radial border border-smoky rounded-br-[40px] rounded-bl-[40px] transition-[border-bottom-right-radius] ease-linear duration-300">
         <div className="flex flex-wrap justify-between mx-8 items-center h-11 lg:h-14 md:mx-16">
           <a href="#home" className="font-title font-bold text-heading text-xl drop-shadow-title shadow-title md:text-2xl lg:text-[32px]">
@@ -77,9 +80,9 @@ const Header = () => {
           <a href="#" className="block drop-shadow-title mb-2 md:mb-4">Projects</a>
           <a href="#" className="block drop-shadow-title mb-2 md:mb-4">Skills</a>
           <select className="bg-transparent drop-shadow-title shadow-title" name="lang" id="language">
-                <option className="bg-[#444F6F] drop-shadow-title shadow-title" value="en">English (US)</option>
-                <option className="bg-[#444F6F] drop-shadow-title shadow-title" value="es">Español (LA)</option>
-              </select>
+            <option className="bg-[#444F6F] drop-shadow-title shadow-title" value="en">English (US)</option>
+            <option className="bg-[#444F6F] drop-shadow-title shadow-title" value="es">Español (LA)</option>
+          </select>
         </div>
       </nav>
     </header>
