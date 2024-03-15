@@ -7,11 +7,11 @@ import arrow from "../assets/hero/arrow-big-down-lines-filled.png";
 
 const Hero = () => {
     return (
-        <section className="grid grid-cols-1 max-w-[425px] text-normal mx-3 items-center min-[425px]:mx-auto sm:max-w-none sm:mx-3 sm:grid-cols-2 md:grid-cols-5">
-            <div className="mx-8 md:justify-self-center md:col-span-2">
+        <section className="grid grid-cols-1 max-w-[425px] text-normal mx-3 items-center min-[425px]:mx-auto sm:max-w-[895px] sm:mx-auto sm:grid-cols-2 md:grid-cols-5 lg:px-10">
+            <div className="mx-8 md:justify-self-center lg:mx-0 md:col-span-2">
                 <img className="border border-smoky rounded-3xl my-6 sm:w-56" src={hero} alt="Hero Profile Pic" />
             </div>
-            <div className="text-center font-bold md:text-start md:max-w-96 md:col-span-3">
+            <div className="text-center font-bold justify-self-center md:text-start md:max-w-96 md:col-span-3">
                 <h1 className="font-title text-heading text-[calc(14px+5vw)] drop-shadow-title shadow-name min-[425px]:text-4xl min-[425px]:mb-1 md:text-4.5xl md:leading-normal lg:text-5xl lg:mb-2">Joaquin Juarez</h1>
                 <h2 className="font-title text-heading text-[calc(8px+5vw)] drop-shadow-title shadow-role mb-3 min-[425px]:text-3xl md:text-[32px]">Web Developer</h2>
                 <p className="text-[calc(4vw-1px)] font-medium font-sub-title mb-4 min-[425px]:text-base">Creating meaningful code for the future</p>

@@ -40,6 +40,10 @@
         text-shadow: 2px 2px 5px gold;
     }
 
+    .shadow-highlight {
+        text-shadow: 1px 1px 3px blue;
+    }
+
     .shadow-hamburger {
         text-shadow: 2px -2px 4px red;
     }
