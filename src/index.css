@@ -32,6 +32,10 @@
         text-shadow: 2px 2px 5px red;
     }
 
+    .shadow-hamburger {
+        text-shadow: 2px -2px 4px red;
+    }
+    
     .shadow-name {
         text-shadow: 2px 2px 5px darkgreen;
     }
@@ -48,7 +52,20 @@
         text-shadow: 1px 1px 3px blue;
     }
 
-    .shadow-hamburger {
-        text-shadow: 2px -2px 4px red;
+    .shadow-front {
+        text-shadow: 2px 2px 5px darkorange;
     }
+
+    .shadow-back {
+        text-shadow: 2px 2px 5px darkcyan;
+    }
+
+    .shadow-learning {
+        text-shadow: 2px 2px 5px lightgray;
+    }
+
+    .shadow-tools {
+        text-shadow: 2px 2px 5px magenta;
+    }
+
 }
