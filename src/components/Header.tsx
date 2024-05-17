@@ -1,6 +1,10 @@
 import { useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
+  //Translation vars
+  const { t, i18n } = useTranslation();
+
   //isOpen family is used to check if a animated menu is active
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenLang, setIsOpenLang] = useState(false);
@@ -157,6 +161,18 @@ const Header = () => {
     }
   };
 
+  //Language swaper handler
+  const handleLangSwap = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const lang = event.target as HTMLButtonElement;
+    if (lang.id === "es") {
+      i18n.changeLanguage("es");
+      history.pushState({}, "", '/es');
+    } else {
+      history.pushState({}, "", '/');
+      i18n.changeLanguage("en");
+    }
+  };
+
   return (
     <header className="z-10 fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-screen-xl px-1">
       <div ref={headerRef} className="bg-radial border border-smoky rounded-br-[40px] rounded-bl-[40px] transition-[border-bottom-right-radius] ease-linear duration-300">
@@ -175,7 +191,7 @@ const Header = () => {
             <div className="justify-self-end  flex flex-wrap items-center">
               <div className="hidden shadow-title font-title font-bold text-heading shadow-title text-xl md:inline md:mr-16 lg:mr-0">
                 <div onClick={handleLanguage} ref={droplangRef}>
-                  <span className="cursor-default select-none drop-shadow-title mr-1">English (US)</span>
+                  <span className="cursor-default select-none drop-shadow-title mr-1">{i18n.resolvedLanguage === "en" ? t('english') : t('spanish')}</span>
                   {isOpenLang ?
                     <span className="cursor-default select-none text-base drop-shadow-title">&#x25B3;</span>
                     :
@@ -183,8 +199,8 @@ const Header = () => {
                   }
                 </div>
                 <div ref={langRef} className="-z-10 hidden absolute top-[-80%] bg-radial border border-smoky rounded-md text-lg animate-language p-1 pr-6 mt-1 lg:mt-6">
-                  <a href="/" className="block drop-shadow-title mb-4">English (US)</a>
-                  <a href="/es" className="block drop-shadow-title">Español (LA)</a>
+                  <button id="en" className="block drop-shadow-title select-none shadow-title mb-4" onClick={handleLangSwap}>{t('english')}</button>
+                  <button id="es" className="block drop-shadow-title select-none shadow-title" onClick={handleLangSwap}>{t('spanish')}</button>
                 </div>
               </div>
               <div className="lg:hidden" onClick={handleMenu} ref={menuRef}>
