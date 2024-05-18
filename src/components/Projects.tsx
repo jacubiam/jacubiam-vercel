@@ -1,14 +1,14 @@
-import { tool } from "../utils/projects-info";
-import { project } from "../utils/projects-info";
-import { projects } from "../utils/projects-info";
+import { useTranslation } from "react-i18next";
+import { tool, project, projects } from "../utils/projects-info";
 import Tech from "./Tech";
 
 const Projects = () => {
-
+    const { t } = useTranslation();
+    
     return (
         <section id="projects" className="grid grid-cols-1 text-normal max-w-[895px] mx-3 pt-16 md:mx-auto md:grid-cols-2 lg:pt-20">
-            <h1 className="font-title font-bold text-heading text-[calc(8px+5vw)] drop-shadow-title shadow-title mb-6 ml-2 min-[425px]:text-3xl md:col-span-2 md:text-[32px] md:ml-8 lg:ml-14">Projects</h1>
-            {
+            <h1 className="font-title font-bold text-heading text-[calc(8px+5vw)] drop-shadow-title shadow-title mb-6 ml-2 min-[425px]:text-3xl md:col-span-2 md:text-[32px] md:ml-8 lg:ml-14">{t('projects')}</h1>
+            { 
                 projects.map((project: project, index: number) => {
                     return (
                         <div key={index} className="flex flex-wrap border border-smoky rounded-3xl max-w-[500px] mx-auto mb-4 md:mx-3 md:mb-6 md:min-h-[482px]">

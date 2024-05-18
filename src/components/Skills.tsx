@@ -1,11 +1,14 @@
+import { useTranslation } from "react-i18next";
 import { skill } from "../utils/skills-info";
 import { skills } from "../utils/skills-info";
 import Tech from "./Tech";
 
 const Skills = () => {
+    const { t } = useTranslation();
+
     return (
         <section id="skills" className="grid grid-cols-1 text-normal max-w-[783px] gap-4 mx-3 pt-16 md:mx-auto sm:grid-cols-2 md:gap-y-8 lg:pt-20">
-            <h1 className="font-title font-bold text-heading text-[calc(8px+5vw)] drop-shadow-title shadow-title mb-2 ml-2 min-[425px]:text-3xl sm:col-span-2 md:text-[32px] md:mb-0 md:ml-8 lg:ml-0 ">Skills</h1>
+            <h1 className="font-title font-bold text-heading text-[calc(8px+5vw)] drop-shadow-title shadow-title mb-2 ml-2 min-[425px]:text-3xl sm:col-span-2 md:text-[32px] md:mb-0 md:ml-8 lg:ml-0 ">{t('skills')}</h1>
             {
                 skills.map((skill: skill, index: number) => {
                     return (

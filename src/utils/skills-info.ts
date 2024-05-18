@@ -1,3 +1,5 @@
+import i18n from "../i18n";
+
 export interface skill {
     "title": string,
     "shadow": string,
@@ -16,14 +18,24 @@ export const skills: skill[] = [
         "list": ["PHP", "Laravel", "Postgres", "Firebase", "Supabase"]
     },
     {
-        "title": "Learning",
+        "title": i18n.t('skill-learning'),
         "shadow": "shadow-learning",
         "list": ["NodeJS", "Express", "NextJS", "Docker"]
     },
     {
-        "title": "Tools",
+        "title": i18n.t('skill-tools'),
         "shadow": "shadow-tools",
         "list": ["Git", "Github", "VScode", "Figma", "Vite"]
     }
 ];
+
+export const updateData = () => {
+    skills[2].title = i18n.t('skill-learning');
+    skills[3].title = i18n.t('skill-tools');
+};
+
+//When language change, the data is updated
+i18n.on('languageChanged', () => {
+    updateData();
+});
 

@@ -4,5 +4,16 @@
     "projects": "Projects",
     "skills": "Skills",
     "english": "English (US)",
-    "spanish": "Spanish (LA)"
+    "spanish": "Spanish (LA)",
+    "hero-text": "Creating valuable code for humans",
+    "download-cv": "Download CV",
+    "about-p1": "I'm a web dev from El Salvador, currently studying at Kodigo but ready to get experience in real world scenarios, my commitment with the work it's clear and I know I'm ready to collaborate in important projects with amazing teams.",
+    "education-kodigo": "Full Stack Developer",
+    "education-ues": "Systems Engineering (2nd Year)",
+    "project-davivienda": "Hackathon Davivienda",
+    "project-davivienda-desc": "A landing page built for a Hackathon hosted by Davivienda S.A. This was a collaborative project as part of real-world Kodigo practices.",
+    "project-spoty": "Spotify Album Checker",
+    "project-spoty-desc": "A lightweight app for viewing and listening to albums within the Spotify API.",
+    "skill-learning": "Learning",
+    "skill-tools": "Tools"
 }

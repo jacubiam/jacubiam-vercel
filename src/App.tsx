@@ -11,12 +11,17 @@ import "./i18n";
 
 function App() {
   const { i18n } = useTranslation();
-  
+
   useEffect(() => {
     const userLang = navigator.language;
-    if (userLang.includes("es")) {
+    const pathname = window.location.pathname;
+    if (pathname === "/es") {
       i18n.changeLanguage('es');
-      history.pushState({}, "", '/es');
+    } else {
+      if (userLang.includes("es")) {
+        i18n.changeLanguage('es');
+        history.pushState({}, "", '/es');
+      }
     }
   }, [i18n]);
 

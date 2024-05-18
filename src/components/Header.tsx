@@ -182,10 +182,10 @@ const Header = () => {
           <div className="grid grid-flow-col items-center w-2/3">
             <nav className="hidden lg:flex">
               <div className="font-title font-bold text-heading shadow-title text-base xl:text-lg">
-                <a href="#about-me" className="drop-shadow-title mr-8">About Me</a>
-                <a href="#education" className="drop-shadow-title mr-8">Education</a>
-                <a href="#projects" className="drop-shadow-title mr-8">Projects</a>
-                <a href="#skills" className="drop-shadow-title mr-8">Skills</a>
+                <a href="#about-me" className="drop-shadow-title mr-8">{t('about-me')}</a>
+                <a href="#education" className="drop-shadow-title mr-8">{t('education')}</a>
+                <a href="#projects" className="drop-shadow-title mr-8">{t('projects')}</a>
+                <a href="#skills" className="drop-shadow-title mr-8">{t('skills')}</a>
               </div>
             </nav>
             <div className="justify-self-end  flex flex-wrap items-center">
@@ -220,13 +220,13 @@ const Header = () => {
       </div>
       <nav className="hidden lg:hidden w-fit absolute right-0 mr-1">
         <div ref={navRef} className="bg-radial border-x border-b border-smoky rounded-br-[20px] rounded-bl-[20px] font-title font-bold text-heading animate-hamburger shadow-title p-4 md:p-8">
-          <a href="#about-me" className="block drop-shadow-title mb-2 md:mb-4">About Me</a>
-          <a href="#education" className="block drop-shadow-title mb-2 md:mb-4">Education</a>
-          <a href="#projects" className="block drop-shadow-title mb-2 md:mb-4">Projects</a>
-          <a href="#skills" className="block drop-shadow-title mb-2 md:mb-0">Skills</a>
+          <a href="#about-me" className="block drop-shadow-title mb-2 md:mb-4">{t('about-me')}</a>
+          <a href="#education" className="block drop-shadow-title mb-2 md:mb-4">{t('education')}</a>
+          <a href="#projects" className="block drop-shadow-title mb-2 md:mb-4">{t('projects')}</a>
+          <a href="#skills" className="block drop-shadow-title mb-2 md:mb-0">{t('skills')}</a>
           <div className="md:hidden shadow-title shadow-title">
             <div onClick={handleLanguageHam} ref={droplangHamburgerRef}>
-              <span className="cursor-default select-none drop-shadow-title mr-1">English (US)</span>
+              <span className="cursor-default select-none drop-shadow-title mr-1">{i18n.resolvedLanguage === "en" ? t('english') : t('spanish')}</span>
               {isOpenLangHam ?
                 <span className="cursor-default select-none text-base drop-shadow-title">&#x25B3;</span>
                 :
@@ -234,8 +234,8 @@ const Header = () => {
               }
             </div>
             <div ref={langHamburgerRef} className="-z-10 hidden absolute left-0 -bottom-[2px] bg-radial border border-smoky rounded-md animate-language p-4 pr-6 mt-1 lg:mt-6">
-              <a href="/" className="block drop-shadow-title mb-4">English (US)</a>
-              <a href="/es" className="block drop-shadow-title">Español (LA)</a>
+              <a href="/" className="block drop-shadow-title mb-4">{t('english')}</a>
+              <a href="/es" className="block drop-shadow-title">{t('spanish')}</a>
             </div>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import i18n from "../i18n";
 import davivienda from "../assets/projects/davivienda-img.png";
 import spotify from "../assets/projects/spotify-album.png";
 
@@ -16,12 +17,12 @@ export interface project {
 export const projects: project[] = [
     {
         "img": davivienda,
-        "title": "Hackathon Davivienda",
+        "title": i18n.t('project-davivienda'),
         "site": "https://davivienda-landing.vercel.app/",
-        "description": "A landing page built for a Hackathon hosted by Davivienda S.A. This was a collaborative project as part of real-world Kodigo practice.",
+        "description": i18n.t('project-davivienda-desc'),
         "tools": [
             {
-                "name": "React",      
+                "name": "React",
             },
             {
                 "name": "Tailwind",
@@ -33,12 +34,12 @@ export const projects: project[] = [
     },
     {
         "img": spotify,
-        "title": "Spotify Album Checker",
+        "title": i18n.t('project-spoty'),
         "site": "https://kodigo-music.vercel.app/",
-        "description": "A lightweight app for viewing albums within the Spotify API.",
+        "description": i18n.t('project-spoty-desc'),
         "tools": [
             {
-                "name": "React",      
+                "name": "React",
             },
             {
                 "name": "Tailwind",
@@ -47,5 +48,17 @@ export const projects: project[] = [
                 "name": "Typescript",
             },
         ],
-    },
+    }
 ];
+
+export const updateData = () => {
+    projects[0].title = i18n.t('project-davivienda');
+    projects[0].description = i18n.t('project-davivienda-desc');
+    projects[1].title = i18n.t('project-spoty');
+    projects[1].description = i18n.t('project-spoty-desc');
+};
+
+//When language change, the data is updated
+i18n.on('languageChanged', () => {
+    updateData();
+});

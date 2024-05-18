@@ -4,8 +4,12 @@ import github from "../assets/hero/brand-github.png";
 import linkedin from "../assets/hero/brand-linkedin.png";
 import mail from "../assets/hero/mail.png";
 import arrow from "../assets/hero/arrow-big-down-lines-filled.png";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+    //Translation vars
+    const { t } = useTranslation();
+
     return (
         <section className="grid grid-cols-1 max-w-[425px] text-normal mx-3 items-center min-[425px]:mx-auto sm:max-w-[895px] sm:mx-auto sm:grid-cols-2 md:grid-cols-5 lg:px-10">
             <div className="mx-8 md:justify-self-center lg:mx-0 md:col-span-2">
@@ -14,7 +18,7 @@ const Hero = () => {
             <div className="text-center font-bold justify-self-center md:text-start md:max-w-96 md:col-span-3">
                 <h1 className="font-title text-heading text-[calc(14px+5vw)] drop-shadow-title shadow-name min-[425px]:text-4xl min-[425px]:mb-1 md:text-4.5xl md:leading-normal lg:text-5xl lg:mb-2">Joaquin Juarez</h1>
                 <h2 className="font-title text-heading text-[calc(8px+5vw)] drop-shadow-title shadow-role mb-3 min-[425px]:text-3xl md:text-[32px]">Web Developer</h2>
-                <p className="text-[calc(4vw-1px)] font-medium font-sub-title mb-4 min-[425px]:text-base">Creating meaningful code for the future</p>
+                <p className="text-[calc(4vw-1px)] font-medium font-sub-title mb-4 min-[425px]:text-base">{t('hero-text')}</p>
                 <div className="grid grid-flow-col grid-rows-1 mb-4 justify-center md:justify-start">
                     <img className="justify-self-center w-[calc(5vw)] mr-1 min-[425px]:w-5" src={map} alt="Map Pin" />
                     <p className="text-[calc(4vw)] font-sub-title min-[425px]:text-base sm:text-sm md:text-base">Zacatecoluca, La Paz, El Salvador</p>
@@ -30,7 +34,7 @@ const Hero = () => {
                         <img className="max-w-11 transition duration-300 hover:scale-110" src={mail} alt="Mail Icon" />
                     </a>
                     <a href="CV_Public.pdf" target="_blank" className="border border-smoky rounded-xl col-span-3 grid grid-flow-col justify-evenly items-center py-2 px-1 hover:scale-105">
-                        <span className="text-[calc(4vw-1px)] min-[425px]:text-base sm:text-sm md:text-base">Download CV</span>
+                        <span className="text-[calc(4vw-1px)] min-[425px]:text-base sm:text-sm md:text-base">{t('download-cv')}</span>
                         <img className="w-[calc(4vw)] min-[425px]:w-5" src={arrow} alt="Arrow Icon" />
                     </a>
                 </div>
