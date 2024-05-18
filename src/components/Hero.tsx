@@ -29,7 +29,7 @@ const Hero = () => {
                     <a href="mailto:joaquinjuarez17@hotmail.com" target="_blank">
                         <img className="max-w-11 transition duration-300 hover:scale-110" src={mail} alt="Mail Icon" />
                     </a>
-                    <a href="#" target="_blank" className="border border-smoky rounded-xl col-span-3 grid grid-flow-col justify-evenly items-center py-2 px-1 hover:scale-105">
+                    <a href="CV_Public.pdf" target="_blank" className="border border-smoky rounded-xl col-span-3 grid grid-flow-col justify-evenly items-center py-2 px-1 hover:scale-105">
                         <span className="text-[calc(4vw-1px)] min-[425px]:text-base sm:text-sm md:text-base">Download CV</span>
                         <img className="w-[calc(4vw)] min-[425px]:w-5" src={arrow} alt="Arrow Icon" />
                     </a>
