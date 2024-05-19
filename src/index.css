@@ -24,7 +24,10 @@
     }
 
     body {
-        background-color: #444F6F;
+        background: linear-gradient(45deg, #424d67 12%, transparent 0, transparent 88%, #424d67 0),
+            linear-gradient(135deg, transparent 37%, #3a4360 0, #3a4360 63%, transparent 0),
+            linear-gradient(45deg, transparent 37%, #424d67 0, #424d67 63%, transparent 0) #323a58;
+        background-size: 25px 25px;
     }
 }
 
@@ -36,7 +39,7 @@
     .shadow-hamburger {
         text-shadow: 2px -2px 4px red;
     }
-    
+
     .shadow-name {
         text-shadow: 2px 2px 5px darkgreen;
     }
