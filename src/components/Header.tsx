@@ -234,8 +234,8 @@ const Header = () => {
               }
             </div>
             <div ref={langHamburgerRef} className="-z-10 hidden absolute left-0 -bottom-[2px] bg-radial border border-smoky rounded-md animate-language p-4 pr-6 mt-1 lg:mt-6">
-              <a href="/" className="block drop-shadow-title mb-4 hover:text-[darkred] hover:shadow-title-hover">{t('english')}</a>
-              <a href="/es" className="block drop-shadow-title hover:text-[darkred] hover:shadow-title-hover">{t('spanish')}</a>
+              <button id="en" className="block drop-shadow-title select-none shadow-title mb-4 hover:text-[darkred] hover:shadow-title-hover" onClick={handleLangSwap}>{t('english')}</button>
+              <button id="es" className="block drop-shadow-title select-none shadow-title hover:text-[darkred] hover:shadow-title-hover" onClick={handleLangSwap}>{t('spanish')}</button>
             </div>
           </div>
         </div>
