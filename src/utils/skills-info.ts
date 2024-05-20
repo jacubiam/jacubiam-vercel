@@ -10,12 +10,12 @@ export const skills: skill[] = [
     {
         "title": "Front-end",
         "shadow": "shadow-front",
-        "list": ["HTML", "CSS", "Javascript", "React", "Tailwind", "Typescript"]
+        "list": ["HTML", "CSS", "Javascript", "React", "Tailwind", "Typescript", "Bootstrap"]
     },
     {
         "title": "Back-end",
         "shadow": "shadow-back",
-        "list": ["PHP", "Laravel", "Postgres", "Firebase", "Supabase"]
+        "list": ["PHP", "Laravel", "Postgres", "Firebase", "Supabase", "MySQL", "Vite"]
     },
     {
         "title": i18n.t('skill-learning'),
@@ -25,7 +25,7 @@ export const skills: skill[] = [
     {
         "title": i18n.t('skill-tools'),
         "shadow": "shadow-tools",
-        "list": ["Git", "Github", "VScode", "Figma", "Vite"]
+        "list": ["Git", "Github", "VScode", "Figma"]
     }
 ];
 
