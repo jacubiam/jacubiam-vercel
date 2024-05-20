@@ -177,39 +177,39 @@ const Header = () => {
     <header className="z-10 fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-screen-xl px-1">
       <div ref={headerRef} className="bg-radial border border-smoky rounded-br-[40px] rounded-bl-[40px] transition-[border-bottom-right-radius] ease-linear duration-300">
         <div className="flex flex-wrap justify-between mx-8 items-center h-11 lg:h-14 md:mx-16">
-          <a href="#home" className="font-title font-bold text-heading text-xl drop-shadow-title shadow-title md:text-2xl lg:text-[32px]">
+          <a href="#home" className="font-title font-bold text-heading text-xl drop-shadow-title shadow-title md:text-2xl lg:text-[32px] hover:text-[darkred] hover:shadow-title-hover">
             Sublime Page</a>
-          <div className="grid grid-flow-col items-center w-2/3">
+          <div className="grid grid-flow-col items-center lg:w-2/3">
             <nav className="hidden lg:flex">
               <div className="font-title font-bold text-heading shadow-title text-base xl:text-lg">
-                <a href="#about-me" className="drop-shadow-title mr-8">{t('about-me')}</a>
-                <a href="#education" className="drop-shadow-title mr-8">{t('education')}</a>
-                <a href="#projects" className="drop-shadow-title mr-8">{t('projects')}</a>
-                <a href="#skills" className="drop-shadow-title mr-8">{t('skills')}</a>
+                <a href="#about-me" className="drop-shadow-title mr-8 hover:text-[darkred] hover:shadow-title-hover">{t('about-me')}</a>
+                <a href="#education" className="drop-shadow-title mr-8 hover:text-[darkred] hover:shadow-title-hover">{t('education')}</a>
+                <a href="#projects" className="drop-shadow-title mr-8 hover:text-[darkred] hover:shadow-title-hover">{t('projects')}</a>
+                <a href="#skills" className="drop-shadow-title mr-8 hover:text-[darkred] hover:shadow-title-hover">{t('skills')}</a>
               </div>
             </nav>
             <div className="justify-self-end  flex flex-wrap items-center">
               <div className="hidden shadow-title font-title font-bold text-heading shadow-title text-xl md:inline md:mr-16 lg:mr-0">
-                <div onClick={handleLanguage} ref={droplangRef}>
-                  <span className="cursor-default select-none drop-shadow-title mr-1">{i18n.resolvedLanguage === "en" ? t('english') : t('spanish')}</span>
+                <div className=" cursor-pointer rounded-md py-1 px-2 lg:py-2 lg:px-3 hover:bg-slate-500/60" onClick={handleLanguage} ref={droplangRef}>
+                  <span className="cursor-pointer select-none drop-shadow-title mr-1">{i18n.resolvedLanguage === "en" ? t('english') : t('spanish')}</span>
                   {isOpenLang ?
-                    <span className="cursor-default select-none text-base drop-shadow-title">&#x25B3;</span>
+                    <span className="cursor-pointer select-none text-base drop-shadow-title">&#x25B3;</span>
                     :
-                    <span className="cursor-default select-none text-base drop-shadow-title">&#x25BD;</span>
+                    <span className="cursor-pointer select-none text-base drop-shadow-title">&#x25BD;</span>
                   }
                 </div>
                 <div ref={langRef} className="-z-10 hidden absolute top-[-80%] bg-radial border border-smoky rounded-md text-lg animate-language p-1 pr-6 mt-1 lg:mt-6">
-                  <button id="en" className="block drop-shadow-title select-none shadow-title mb-4" onClick={handleLangSwap}>{t('english')}</button>
-                  <button id="es" className="block drop-shadow-title select-none shadow-title" onClick={handleLangSwap}>{t('spanish')}</button>
+                  <button id="en" className="block drop-shadow-title select-none shadow-title mb-4 hover:text-[darkred] hover:shadow-title-hover" onClick={handleLangSwap}>{t('english')}</button>
+                  <button id="es" className="block drop-shadow-title select-none shadow-title hover:text-[darkred] hover:shadow-title-hover" onClick={handleLangSwap}>{t('spanish')}</button>
                 </div>
               </div>
               <div className="lg:hidden" onClick={handleMenu} ref={menuRef}>
                 {isOpen ?
-                  <div className="font-title font-bold text-normal text-[28px] tracking-widest cursor-default select-none leading-7 w-7 h-7 text-center drop-shadow-title shadow-title">
+                  <div className="font-title font-bold text-normal text-[28px] tracking-widest cursor-pointer select-none leading-7 w-7 h-7 text-center drop-shadow-title shadow-title">
                     X
                   </div>
                   :
-                  <div className="font-title font-bold text-normal text-2xl tracking-widest cursor-default select-none rotate-90 drop-shadow-title shadow-hamburger">
+                  <div className="font-title font-bold text-normal text-2xl tracking-widest cursor-pointer select-none rotate-90 drop-shadow-title shadow-hamburger">
                     |||
                   </div>
                 }
@@ -220,22 +220,22 @@ const Header = () => {
       </div>
       <nav className="hidden lg:hidden w-fit absolute right-0 mr-1">
         <div ref={navRef} className="bg-radial border-x border-b border-smoky rounded-br-[20px] rounded-bl-[20px] font-title font-bold text-heading animate-hamburger shadow-title p-4 md:p-8">
-          <a href="#about-me" className="block drop-shadow-title mb-2 md:mb-4">{t('about-me')}</a>
-          <a href="#education" className="block drop-shadow-title mb-2 md:mb-4">{t('education')}</a>
-          <a href="#projects" className="block drop-shadow-title mb-2 md:mb-4">{t('projects')}</a>
-          <a href="#skills" className="block drop-shadow-title mb-2 md:mb-0">{t('skills')}</a>
+          <a href="#about-me" className="block drop-shadow-title ml-1 mb-2 md:mb-4 hover:text-[darkred] hover:shadow-title-hover">{t('about-me')}</a>
+          <a href="#education" className="block drop-shadow-title ml-1 mb-2 md:mb-4 hover:text-[darkred] hover:shadow-title-hover">{t('education')}</a>
+          <a href="#projects" className="block drop-shadow-title ml-1 mb-2 md:mb-4 hover:text-[darkred] hover:shadow-title-hover">{t('projects')}</a>
+          <a href="#skills" className="block drop-shadow-title ml-1 mb-2 md:mb-0 hover:text-[darkred] hover:shadow-title-hover">{t('skills')}</a>
           <div className="md:hidden shadow-title shadow-title">
-            <div onClick={handleLanguageHam} ref={droplangHamburgerRef}>
-              <span className="cursor-default select-none drop-shadow-title mr-1">{i18n.resolvedLanguage === "en" ? t('english') : t('spanish')}</span>
+            <div className="cursor-pointer rounded-md p-1 hover:bg-slate-500/60" onClick={handleLanguageHam} ref={droplangHamburgerRef}>
+              <span className="cursor-pointer select-none drop-shadow-title mr-1">{i18n.resolvedLanguage === "en" ? t('english') : t('spanish')}</span>
               {isOpenLangHam ?
-                <span className="cursor-default select-none text-base drop-shadow-title">&#x25B3;</span>
+                <span className="cursor-pointer select-none text-base drop-shadow-title">&#x25B3;</span>
                 :
-                <span className="cursor-default select-none text-base drop-shadow-title">&#x25BD;</span>
+                <span className="cursor-pointer select-none text-base drop-shadow-title">&#x25BD;</span>
               }
             </div>
             <div ref={langHamburgerRef} className="-z-10 hidden absolute left-0 -bottom-[2px] bg-radial border border-smoky rounded-md animate-language p-4 pr-6 mt-1 lg:mt-6">
-              <a href="/" className="block drop-shadow-title mb-4">{t('english')}</a>
-              <a href="/es" className="block drop-shadow-title">{t('spanish')}</a>
+              <a href="/" className="block drop-shadow-title mb-4 hover:text-[darkred] hover:shadow-title-hover">{t('english')}</a>
+              <a href="/es" className="block drop-shadow-title hover:text-[darkred] hover:shadow-title-hover">{t('spanish')}</a>
             </div>
           </div>
         </div>
