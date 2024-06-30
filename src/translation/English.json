@@ -14,6 +14,8 @@
     "project-davivienda-desc": "A landing page built for a Hackathon hosted by Davivienda S.A. This was a collaborative project as part of real-world Kodigo practices.",
     "project-spoty": "Spotify Album Checker",
     "project-spoty-desc": "A lightweight app for viewing and listening to albums within the Spotify API.",
+    "project-academy": "Academy Questionnaire",
+    "project-academy-desc": "5-question questionnaire where the client requests the creation of the user, generation of questions and finally their evaluation, all the processing is executed in a Laravel backend. Finally, the result is sent to the user's email.",
     "skill-learning": "Learning",
     "skill-tools": "Tools"
 }
