@@ -17,7 +17,7 @@ const Projects = () => {
                                     <img className="rounded-3xl mb-4" src={project.img} alt={`${project.img} icon`} />
                                 </a>
                                 <div className="mx-3">
-                                    <a href={project.site}>
+                                    <a href={project.site} target="_blank">
                                         <h2 className="font-title font-bold text-heading text-[calc(6px+5vw)] drop-shadow-title shadow-project mb-4 min-[425px]:text-3xl">{project.title}</h2>
                                     </a>
                                         <p className="text-[calc(5vw)] mb-4 min-[425px]:text-xl">{project.description}</p>
